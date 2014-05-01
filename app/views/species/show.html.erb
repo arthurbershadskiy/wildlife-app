@@ -1,0 +1,17 @@
+<h1><%= @specie.name %></h1>
+
+<h3>Sightings:</h3>
+<ul>
+<% @specie.sightings.each do |sighting| %>
+    <ul>
+      <li><%= sighting.date %></li>
+      <li><%= sighting.longitude %></li>
+      <li><%= sighting.latitude %></li>
+      <li><a href="/species/<%= @specie.id %>/sightings/<%= sighting.id %>/edit">Edit sighting</a> | <a href="/species/<%= @specie.id %>/sightings/<%= sighting.id %>/delete">Delete sighting</a> </li>
+    </ul>
+<% end %>
+</ul>
+
+
+<p><a href='/species/<%= @specie.id %>/sightings/new'>Add new sighting</a></p>
+<p><a href="/species">Back to index</a></p>

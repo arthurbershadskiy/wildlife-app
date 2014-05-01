@@ -1,0 +1,11 @@
+<h1>Animal Tracker</h1>
+
+<h3>Species</h3>
+<ul>
+  <% @species.each do |specie| %>
+    <li><a href="species/<%= specie.id %>"><%= specie.name %></a> | <a href="species/<%= specie.id %>/edit">Edit Animal name</a> | <a href="species/<%= specie.id %>/delete" >Delete Animal :(</a></li>
+  <% end %>
+</ul>
+
+
+<h4><a href='species/new'>Add new species</a></h4>

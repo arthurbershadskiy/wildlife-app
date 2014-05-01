@@ -1,0 +1,14 @@
+<% if @specie.errors.any? %>
+  <ul>
+    <% @specie.errors.full_messages.each do |m| %>
+      <li><%= m %></li>  
+    <% end %>
+  </ul>
+<% end %>
+
+<h4>Add new specie</h4>
+<form action="/species" method="post">
+  <label for="species_name">Name:</label>
+  <input type="text" name="name">
+  <button>Add</button>
+</form> 
