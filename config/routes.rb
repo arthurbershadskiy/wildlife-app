@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :regions
+
   root 'species#index'
   match 'species/new', { via: :get, to: 'species#new'}
   match '/species', { via: :post, to: 'species#add'}
